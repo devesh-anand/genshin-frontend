@@ -19,7 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
    color: theme.palette.text.secondary,
 }));
 let test = ["aaa", "bbbb"];
-export default function submitImage() {
+export default function SubmitImage() {
    let [character, setCharacter] = useState("");
    let [urls, setUrls] = useState([]);
    let [tooltipIsOpen, setTooltipIsOpen] = useState(false);

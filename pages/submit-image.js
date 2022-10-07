@@ -40,7 +40,7 @@ export default function SubmitImage() {
          console.log(formData);
          if (formData) {
             let res = await axios.post(
-               "http://localhost:5000/others/image",
+               "https://genshin-impact.up.railway.app/others/image",
                formData,
                {
                   headers: {

@@ -9,6 +9,7 @@ import {
    Tooltip,
 } from "@mui/material";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import axios from "axios";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -40,7 +41,7 @@ export default function SubmitImage() {
          console.log(formData);
          if (formData) {
             let res = await axios.post(
-               "https://genshin-impact.up.railway.app/others/image",
+               "http://localhost:5000/others/image",
                formData,
                {
                   headers: {
@@ -110,17 +111,20 @@ export default function SubmitImage() {
                               <Item key={url}>
                                  {url}
 
-                                 <Tooltip
+                                 {/* <Tooltip
                                     open={tooltipIsOpen}
                                     onOpen={() => setTooltipIsOpen(true)}
                                     title="URL copied"
-                                 ></Tooltip>
+                                 ></Tooltip> */}
                                  <ContentCopyIcon
                                     className="mx-4 cursor-pointer"
                                     onClick={() => {
                                        copyUrl(index);
                                     }}
                                  />
+                                 <a href={url} target="_blank">
+                                    <OpenInNewIcon className="cursor-pointer" />
+                                 </a>
                               </Item>
                            );
                         })}

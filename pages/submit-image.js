@@ -122,7 +122,7 @@ export default function SubmitImage() {
                                        copyUrl(index);
                                     }}
                                  />
-                                 <a href={url} target="_blank">
+                                 <a href={url} target="_blank" rel="noreferrer">
                                     <OpenInNewIcon className="cursor-pointer" />
                                  </a>
                               </Item>
